@@ -18,7 +18,7 @@ class CreateHorsesTable extends Migration
             $table->string('breed', 50);
             $table->string('color', 15);
             $table->tinyInteger('age');
-            $table->decimal('win_rate', 3, 2);
+            $table->decimal('win_rate', 3, 2)->nullable();
             $table->timestamps();
         });
     }
