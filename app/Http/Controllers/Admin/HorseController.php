@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Admin;
 
 use App\Horse;
-use App\Http\Requests\HorseUpdateRequest;
+use App\Http\Requests\Admin\Horse\HorseStoreRequest;
+use App\Http\Requests\Admin\Horse\HorseUpdateRequest;
+use App\Http\Resources\Admin\HorseResource;
 use App\Owner;
 use App\Rider;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\HorseStoreRequest;
-use App\Http\Resources\HorseResource;
 
 use Illuminate\Http\Request;
 

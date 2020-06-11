@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Admin;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class HorseResource extends JsonResource
+class OwnerResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,14 +16,9 @@ class HorseResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'breed' => $this->breed,
-            'color' => $this->color,
-            'age' => $this->age,
-            'win_rate' => $this->win_rate,
+            'user_id' => $this->user_id,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,
-            'riders' => RiderResource::collection($this->whenLoaded('riders')),
-            'owner' => OwnerResource::make($this->whenLoaded('owner'))
         ];
     }
 }

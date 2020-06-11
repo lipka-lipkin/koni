@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Http\Resources\Admin;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class OwnerResource extends JsonResource
+class RiderResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,6 +17,7 @@ class OwnerResource extends JsonResource
         return [
             'id' => $this->id,
             'user_id' => $this->user_id,
+            'win_rate' => $this->win_rate,
             'created_at' => (string) $this->created_at,
             'updated_at' => (string) $this->updated_at,
         ];
